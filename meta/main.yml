@@ -34,6 +34,6 @@ galaxy_info:
       versions:
         - bionic
         - focal
-  role_name: skeleton
+  role_name: sourcepoint
 
 dependencies: []
