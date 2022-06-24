@@ -1,12 +1,12 @@
 ---
 # tasks file for sourcepoint
 
-- name: Install git
-  become: yes
-  ansible.builtin.package:
-    name: git
-    state: present
-    update_cache: yes
+# - name: Install git
+#   become: yes
+#   ansible.builtin.package:
+#     name: git
+#     state: present
+#     update_cache: yes
 
 - name: Install SourcePoint
   ansible.builtin.git:
