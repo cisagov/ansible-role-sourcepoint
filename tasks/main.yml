@@ -20,13 +20,13 @@
 #   changed_when: go_path.rc != 0
 
 - name: Download package
-  ansible.builtin.command: 'go get gopkg.in/yaml.v2'
+  ansible.builtin.command: go get gopkg.in/yaml.v2
   args:
     chdir: '{{ playbook_dir }}/tools/SourcePoint'
     creates: '{{ ansible_env.HOME }}/go/pkg/mod/cache/download/gopkg.in/yaml.v2'
 
 - name: Build SourcePoint
-  ansible.builtin.command: 'go build SourcePoint.go'
+  ansible.builtin.command: go build SourcePoint.go
   args:
     chdir: '{{ playbook_dir }}/tools/SourcePoint'
     creates: '{{ playbook_dir }}/tools/SourcePoint/SourcePoint'
