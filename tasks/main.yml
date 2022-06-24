@@ -14,7 +14,7 @@
     version: main
 
 - name: Get go path
-  ansible.builtin.command: /usr/bin/which go
+  ansible.builtin.command: which go
   register: go_path
   changed_when: False
 
