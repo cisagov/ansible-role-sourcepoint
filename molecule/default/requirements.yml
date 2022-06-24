@@ -7,3 +7,7 @@
   name: remove_python2
 - src: https://github.com/cisagov/ansible-role-upgrade
   name: upgrade
+- src: https://github.com/gantsign/ansible-role-golang
+  name: golang
+- src: https://github.com/geerlingguy/ansible-role-git
+  name: git
