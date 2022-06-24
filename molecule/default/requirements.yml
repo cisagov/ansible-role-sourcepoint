@@ -9,3 +9,5 @@
   name: upgrade
 - src: https://github.com/gantsign/ansible-role-golang
   name: golang
+- src: https://github.com/geerlingguy/ansible-role-git.git
+  name: git
