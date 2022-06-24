@@ -2,6 +2,7 @@
 # tasks file for sourcepoint
 
 - name: Install git
+  become: yes
   ansible.builtin.package:
     name: git
     state: present
@@ -16,7 +17,7 @@
 - name: Get go path
   ansible.builtin.command: which go
   register: go_path
-  changed_when: False
+  changed_when: go_path.rc != 0
 
 - name: Download package
   ansible.builtin.command: '{{ go_path.stdout }} get gopkg.in/yaml.v2'
