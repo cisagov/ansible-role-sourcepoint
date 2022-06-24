@@ -6,3 +6,20 @@
     repo: "https://github.com/Tylous/SourcePoint.git"
     dest: '{{ playbook_dir }}/tools/SourcePoint'
     version: main
+
+- name: Get go path
+  command: /usr/bin/which go
+  register: go_path
+  changed_when: False
+
+- name: Download package
+  command: '{{ go_path.stdout }} get gopkg.in/yaml.v2'
+  args:
+    chdir: '{{ playbook_dir }}/tools/SourcePoint'
+    creates: '{{ ansible_env.HOME }}/go/pkg/mod/cache/download/gopkg.in/yaml.v2'
+
+- name: Build SourcePoint
+  command: '{{ go_path.stdout }} build SourcePoint.go'
+  args:
+    chdir: '{{ playbook_dir }}/tools/SourcePoint'
+    creates: '{{ playbook_dir }}/tools/SourcePoint/SourcePoint'
