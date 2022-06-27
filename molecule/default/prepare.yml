@@ -4,3 +4,6 @@
 
 - name: Import python playbook
   ansible.builtin.import_playbook: python.yml
+
+- name: Import extract playbook
+  ansible.builtin.import_playbook: extract.yml

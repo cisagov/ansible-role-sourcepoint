@@ -34,6 +34,10 @@ galaxy_info:
       versions:
         - bionic
         - focal
-  role_name: skeleton
+  role_name: sourcepoint
 
-dependencies: []
+dependencies:
+  - src: https://github.com/gantsign/ansible-role-golang
+    name: golang
+  - src: https://github.com/geerlingguy/ansible-role-git
+    name: git

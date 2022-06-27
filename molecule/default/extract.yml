@@ -1,0 +1,11 @@
+---
+- hosts: all
+  name: Install pip3/python3 and remove pip2/python2
+  become: yes
+  become_method: sudo
+  tasks:
+  - name: Install extraction packages
+    ansible.builtin.package:
+      name:
+      - tar
+      - unzip

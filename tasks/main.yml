@@ -1,2 +1,14 @@
 ---
-# tasks file for skeleton
+# tasks file for sourcepoint
+- name: Install SourcePoint
+  ansible.builtin.git:
+    repo: "https://github.com/Tylous/SourcePoint.git"
+    dest: '{{ playbook_dir }}/tools/SourcePoint'
+    version: main
+
+- name: Build SourcePoint
+  ansible.builtin.shell: source /etc/profile.d/golang.sh && go get gopkg.in/yaml.v2 && go build SourcePoint.go
+  args:
+    chdir: '{{ playbook_dir }}/tools/SourcePoint'
+    creates: '{{ playbook_dir }}/tools/SourcePoint/SourcePoint'
+    executable: /bin/bash
