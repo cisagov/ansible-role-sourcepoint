@@ -8,7 +8,7 @@ This is an Ansible role for installing [SourcePoint](https://github.com/Tylous/S
 
 ## Requirements ##
 
-None.
+This role requires the unzip and tar packages.
 
 ## Role Variables ##
 
@@ -24,6 +24,7 @@ None.
 ## Dependencies ##
 
 - [ansible-role-golang](https://github.com/gantsign/ansible-role-golang)
+- [ansible-role-git](https://github.com/geerlingguy/ansible-role-git)
 
 ## Example Playbook ##
 
