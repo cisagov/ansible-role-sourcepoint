@@ -1,26 +1,13 @@
 ---
 # tasks file for sourcepoint
-
-# - name: Install git
-#   become: yes
-#   ansible.builtin.package:
-#     name: git
-#     state: present
-#     update_cache: yes
-
 - name: Install SourcePoint
   ansible.builtin.git:
     repo: "https://github.com/Tylous/SourcePoint.git"
     dest: '{{ playbook_dir }}/tools/SourcePoint'
     version: main
 
-# - name: Get go path
-#   ansible.builtin.command: which go
-#   register: go_path
-#   changed_when: go_path.rc != 0
-
-- name: Download package
-  ansible.builtin.command: go get gopkg.in/yaml.v2
+- name: Source go env
+  ansible.builtin.shell: source /etc/profile.d/golang.sh && go get gopkg.in/yaml.v2
   args:
     chdir: '{{ playbook_dir }}/tools/SourcePoint'
     creates: '{{ ansible_env.HOME }}/go/pkg/mod/cache/download/gopkg.in/yaml.v2'
