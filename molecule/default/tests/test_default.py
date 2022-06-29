@@ -24,8 +24,11 @@ def test_directories(host, d):
 @pytest.mark.parametrize(
     "f",
     [
+        # Profile created by go role
         "/etc/profile.d/golang.sh",
+        # Go file needed for build
         "/tools/SourcePoint/SourcePoint.go",
+        # SourcePoint binary created from 'go build'
         "/tools/SourcePoint/SourcePoint",
     ],
 )
