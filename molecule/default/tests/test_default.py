@@ -34,3 +34,9 @@ def test_files(host, f):
     assert host.file(f).exists
     assert host.file(f).is_file
     assert host.file(f).content
+
+
+@pytest.mark.parametrize("command", ["/tools/SourcePoint/SourcePoint"])
+def test_commands(host, command):
+    """Test that the expected commands are present."""
+    assert host.exists(command)
