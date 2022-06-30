@@ -25,7 +25,7 @@ def test_directories(host, d):
     "f",
     [
         # Profile created by go role
-        "/etc/profile.d/golang.sh",
+        "/etc/profile.d/go-path.sh",
         # Go file needed for build
         "/tools/SourcePoint/SourcePoint.go",
         # SourcePoint binary created from 'go build'
