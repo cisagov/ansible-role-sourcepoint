@@ -16,7 +16,7 @@
     creates: /tools/SourcePoint/SourcePoint.go
 
 - name: Build SourcePoint
-  ansible.builtin.shell: source /etc/profile.d/go-path.sh && go get gopkg.in/yaml.v2 && go build SourcePoint.go
+  ansible.builtin.shell: source /etc/profile.d/golang.sh && go get gopkg.in/yaml.v2 && go build SourcePoint.go
   args:
     chdir: '/tools/SourcePoint'
     creates: '/tools/SourcePoint/SourcePoint'
