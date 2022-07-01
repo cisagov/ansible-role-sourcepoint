@@ -1,8 +1,8 @@
 # ansible-role-sourcepoint #
 
-[![GitHub Build Status](https://github.com/cisagov/ansible-role-sourcepoint/workflows/build/badge.svg)](https://github.com/cisagov/ansible-role-sourcepoint/actions)
-[![Total alerts](https://img.shields.io/lgtm/alerts/g/cisagov/ansible-role-sourcepoint.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/cisagov/ansible-role-sourcepoint/alerts/)
-[![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/cisagov/ansible-role-sourcepoint.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/cisagov/ansible-role-sourcepoint/context:python)
+[![GitHub Build Status](https://github.com/hsfetty/ansible-role-sourcepoint/workflows/build/badge.svg)](https://github.com/hsfetty/ansible-role-sourcepoint/actions)
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/hsfetty/ansible-role-sourcepoint.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/hsfetty/ansible-role-sourcepoint/alerts/)
+[![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/hsfetty/ansible-role-sourcepoint.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/hsfetty/ansible-role-sourcepoint/context:python)
 
 This is an Ansible role for installing [SourcePoint](https://github.com/Tylous/SourcePoint).
 
