@@ -1,0 +1,8 @@
+---
+- name: Sourcepoint Playbook
+  hosts: localhost
+  become: yes
+
+  tasks:
+  - name: Run tasks/other.yaml instead of 'main'
+    include: tasks/main.yml
