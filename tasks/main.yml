@@ -15,6 +15,12 @@
       - "--strip-components=1"
     creates: /tools/SourcePoint/SourcePoint.go
 
+- name: Edit Loader.go to remove line
+  ansible.builtin.replace:
+    path: /tools/SourcePoint/Loader/Loader.go
+    regexp: 'PE\[5]'
+    replace: 'PE[len(PE)-3]'
+
 - name: Build SourcePoint
   ansible.builtin.shell: source /etc/profile.d/go-path.sh && go get gopkg.in/yaml.v2 && go build SourcePoint.go
   args:
