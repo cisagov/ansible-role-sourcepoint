@@ -15,12 +15,16 @@
       - "--strip-components=1"
     creates: /tools/SourcePoint/SourcePoint.go
 
+#Edit the code to correctly index the variable which is used in a print statement
+#For more info, read:
+##https://github.com/hsfetty/ansible-role-sourcepoint/issues/15
 - name: Edit Loader.go to remove line
   ansible.builtin.replace:
     path: /tools/SourcePoint/Loader/Loader.go
     regexp: 'PE\[5]'
     replace: 'PE[len(PE)-3]'
 
+#Need to source go-path.sh, otherwise the go binary will not be loaded into the $PATH variable
 - name: Build SourcePoint
   ansible.builtin.shell: source /etc/profile.d/go-path.sh && go get gopkg.in/yaml.v2 && go build SourcePoint.go
   args:
