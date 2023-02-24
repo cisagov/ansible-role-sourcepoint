@@ -1,8 +1,11 @@
 ---
+dependencies:
+  - src: https://github.com/geerlingguy/ansible-role-go
+    name: golang
 galaxy_info:
   author: Heather Fetty
-  description: SourcePoint Ansible role
   company: CISA Cyber Assessments
+  description: SourcePoint Ansible role
   galaxy_tags:
     - sourcepoint
   license: CC0
@@ -31,7 +34,6 @@ galaxy_info:
         - bookworm
     - name: Fedora
       versions:
-        - "35"
         - "36"
         - "37"
     - name: Ubuntu
@@ -40,7 +42,3 @@ galaxy_info:
         - focal
         - jammy
   role_name: sourcepoint
-
-dependencies:
-  - src: https://github.com/geerlingguy/ansible-role-go
-    name: golang
