@@ -17,12 +17,18 @@ galaxy_info:
   min_ansible_version: "2.10"
   namespace: cisagov
   platforms:
+<<<<<<< HEAD
     # Amazon Linux is currently not supported due to issues with the tar/unzip
     # packages in the docker image. This issue is documented here:
     # https://github.com/hsfetty/ansible-role-sourcepoint/issues/8
     # - name: Amazon Linux 2
     #   versions:
     #     - any
+=======
+    - name: Amazon Linux 2023
+      versions:
+        - any
+>>>>>>> 52265b1321120661660b8400425f25f9d3021afe
     - name: Debian
       versions:
         - buster
