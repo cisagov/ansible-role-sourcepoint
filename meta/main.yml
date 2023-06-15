@@ -18,6 +18,7 @@ galaxy_info:
   namespace: cisagov
   platforms:
 <<<<<<< HEAD
+<<<<<<< HEAD
     # Amazon Linux is currently not supported due to issues with the tar/unzip
     # packages in the docker image. This issue is documented here:
     # https://github.com/hsfetty/ansible-role-sourcepoint/issues/8
@@ -29,6 +30,11 @@ galaxy_info:
       versions:
         - any
 >>>>>>> 52265b1321120661660b8400425f25f9d3021afe
+=======
+    - name: Amazon Linux
+      versions:
+        - "2023"
+>>>>>>> b1e866deabc2408ffe58711e6a0f32446d183205
     - name: Debian
       versions:
         - buster
@@ -43,7 +49,6 @@ galaxy_info:
         - "2023"
     - name: Ubuntu
       versions:
-        - bionic
         - focal
         - jammy
   role_name: sourcepoint
