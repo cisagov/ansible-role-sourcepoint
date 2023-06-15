@@ -58,4 +58,8 @@ with this waiver of copyright interest.
 
 ## Author Information ##
 
+<<<<<<< HEAD
 Heather Fetty - <heather.fetty@cisa.dhs.gov>
+=======
+First Last - <first.last@gwe.cisa.dhs.gov>
+>>>>>>> b1e866deabc2408ffe58711e6a0f32446d183205

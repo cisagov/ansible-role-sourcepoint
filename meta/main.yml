@@ -1,8 +1,11 @@
 ---
+dependencies:
+  - src: https://github.com/geerlingguy/ansible-role-go
+    name: golang
 galaxy_info:
   author: Heather Fetty
-  description: SourcePoint Ansible role
   company: CISA Cyber Assessments
+  description: SourcePoint Ansible role
   galaxy_tags:
     - sourcepoint
   license: CC0
@@ -14,33 +17,38 @@ galaxy_info:
   min_ansible_version: "2.10"
   namespace: cisagov
   platforms:
+<<<<<<< HEAD
+<<<<<<< HEAD
     # Amazon Linux is currently not supported due to issues with the tar/unzip
     # packages in the docker image. This issue is documented here:
     # https://github.com/hsfetty/ansible-role-sourcepoint/issues/8
     # - name: Amazon Linux 2
     #   versions:
     #     - any
+=======
+    - name: Amazon Linux 2023
+      versions:
+        - any
+>>>>>>> 52265b1321120661660b8400425f25f9d3021afe
+=======
+    - name: Amazon Linux
+      versions:
+        - "2023"
+>>>>>>> b1e866deabc2408ffe58711e6a0f32446d183205
     - name: Debian
       versions:
-        - stretch
         - buster
         - bullseye
-        # Kali linux isn't an option here, but it is based on
-        # Debian Testing:
-        # https://www.kali.org/docs/policy/kali-linux-relationship-with-debian
         - bookworm
     - name: Fedora
       versions:
-        - "35"
-        - "36"
         - "37"
+        - "38"
+    - name: Kali
+      versions:
+        - "2023"
     - name: Ubuntu
       versions:
-        - bionic
         - focal
         - jammy
   role_name: sourcepoint
-
-dependencies:
-  - src: https://github.com/geerlingguy/ansible-role-go
-    name: golang
